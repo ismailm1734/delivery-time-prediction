@@ -19,11 +19,11 @@ streamlit run app/streamlit_app.py
 
 | Model | MAE (days) | RMSE | R² |
 |---|---|---|---|
-| Naive (mean) baseline | – | – | 0.00 |
-| Linear Regression | – | – | – |
-| **XGBoost** | – | – | – |
+| Naive (mean) baseline | 6.13 | 8.32 | 0.00 |
+| Linear Regression | 4.97 | 7.08 | 0.28 |
+| **XGBoost** | **4.43** | **6.46** | **0.40** |
 
-<!-- Fill this table with your actual numbers from models/metrics.json after training -->
+XGBoost predicts delivery time with an average error of ~4.4 days, a 28% improvement over the naive baseline.
 
 Key findings from EDA:
 - Seller-customer **distance** is the strongest predictor of delivery time
@@ -62,7 +62,7 @@ Key findings from EDA:
 ## Setup
 
 ```bash
-git clone https://github.com/<your-username>/delivery-time-prediction.git
+git clone https://github.com/ismailm1734/delivery-time-prediction.git
 cd delivery-time-prediction
 pip install -r requirements.txt
 ```
